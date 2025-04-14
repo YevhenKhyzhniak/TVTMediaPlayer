@@ -14,7 +14,7 @@ It includes classes for video playback, stream decoding, and device management.
   s.ios.deployment_target = '12.0'
   s.swift_version         = '5.0'
 
-  # Headers
+  # Source files
   s.source_files          = 'libAndHeaders/**/*.{h,m,mm}'
   s.public_header_files   = 'libAndHeaders/**/*.h'
 
@@ -28,12 +28,9 @@ It includes classes for video playback, stream decoding, and device management.
 
   s.xcconfig              = { 'OTHER_LDFLAGS' => '-ObjC' }
 
-  # IMPORTANT: set headers root correctly so that #import "DVR_NET_SDK.h" resolves
-  s.header_mappings_dir   = 'libAndHeaders'
-
-  # Optional: explicitly include header search paths
-  s.pod_target_xcconfig   = {
-    'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/TVTMediaPlayer/libAndHeaders/**'
+  # Set header search paths instead of header_mappings_dir
+  s.pod_target_xcconfig = {
+    'HEADER_SEARCH_PATHS' => '$(PODS_TARGET_SRCROOT)/libAndHeaders $(PODS_TARGET_SRCROOT)/libAndHeaders/MediaPlayer $(PODS_TARGET_SRCROOT)/libAndHeaders/SDK'
   }
 
   s.preserve_paths        = 'libAndHeaders/**/*'
