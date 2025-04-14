@@ -24,9 +24,9 @@ It includes classes for video playback, stream decoding, and device management.
   s.resources             = 'libAndHeaders/MediaPlayer/default.metallib'
 
   s.frameworks            = 'AVFoundation', 'CoreMedia', 'UIKit'
-  s.libraries             = 'c++'
+  s.libraries             = 'c++', 'bz2', 'iconv', 'z'
 
-  s.xcconfig              = { 'OTHER_LDFLAGS' => '-ObjC' }
+  s.xcconfig              = { 'OTHER_LDFLAGS' => '-ObjC -lz -liconv -lbz2' }
 
   # IMPORTANT: set headers root correctly so that #import "DVR_NET_SDK.h" resolves
   s.header_mappings_dir   = 'libAndHeaders'
