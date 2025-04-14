@@ -22,7 +22,7 @@ It includes classes for video playback, stream decoding, and device management.
   s.vendored_libraries    = 'libAndHeaders/MediaPlayer/libMediaPlayer.a', 'libAndHeaders/SDK/libDVR_NET_SDK.a'
 
   # Resources (Metallib etc.)
-  s.resources             = 'libAndHeaders/MediaPlayer/default.metallib'
+  #s.resources             = 'libAndHeaders/MediaPlayer/default.metallib'
 
   # Frameworks and libraries
   s.frameworks            = 'AVFoundation', 'CoreMedia', 'UIKit', 'VideoToolbox'
