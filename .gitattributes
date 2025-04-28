@@ -1,0 +1,2 @@
+libMediaPlayer.a filter=lfs diff=lfs merge=lfs -text
+libDVR_NET_SDK.a filter=lfs diff=lfs merge=lfs -text
